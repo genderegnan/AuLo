@@ -1,0 +1,50 @@
+[
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "title": "Remera Hombre",
+        "description": "Remera para hombre",
+        "price": "15.00",
+        "slug": "remera-hombre",
+        "image": "products/remera_hombre_7BRJJ5A.png",
+        "created_at": "2022-01-03T20:37:29.397Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "title": "Remera mujer",
+        "description": "Linda remera de mujer",
+        "price": "20.00",
+        "slug": "remera-mujer",
+        "image": "products/remera_mujer.png",
+        "created_at": "2022-01-19T17:46:18.024Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "title": "Pantalon  Hombre",
+        "description": "asdad as dasdasd asda d",
+        "price": "25.00",
+        "slug": "pantalon-hombre",
+        "image": "products/pantalon_hombre.png",
+        "created_at": "2022-01-19T18:53:34.779Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "title": "Pantalon Mujer",
+        "description": "asd asd sad ad sa d ad ad a dsa d ad sa",
+        "price": "30.00",
+        "slug": "pantalon-mujer",
+        "image": "products/flakensio_euc9jdZ.png",
+        "created_at": "2022-01-20T18:54:14.414Z"
+    }
+}
+]
