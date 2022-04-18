@@ -1,19 +1,23 @@
 from django.shortcuts import render
 
+from products.models import Product
+
 from .models import Cart
+from .utils import get_or_create_cart
 
 def cart(request):
-    
-    user = request.user if request.user.is_authenticated else None
-    cart_id = request.session.get('cart_id')
+    cart = get_or_create_cart(request)
+   
+    return render(request, 'carts/cart.html',{
 
-    if cart_id:
-        cart = Cart.objects.get(cart_id=cart_id)#obtenemos el carrito de base de datos
-    else:
-        cart = Cart.objects.create(user=user) 
-    
-    request.session['cart_id'] = cart_id
+    })
 
-    return render(request, 'carts/Cart.html',{
+def add(request):
+    cart = get_or_create_cart(request)
+    product = Product.objects.get(pk=request.POST.get('product_id'))
 
+    cart.products.add(product)
+
+    return render(request, 'carts/add.html', {
+        'product':product
     })
